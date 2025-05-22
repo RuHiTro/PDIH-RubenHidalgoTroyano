@@ -1,0 +1,81 @@
+%!PS
+
+ /copa {
+   newpath
+   0 0 40 0 360 arc
+   0 0.6 0 setrgbcolor
+   fill
+ } def
+
+% Arbol de la derecha
+
+gsave
+  340 230 translate
+  90 rotate
+  newpath
+    0 0 moveto
+    160 0 rlineto
+    0 80 rlineto
+    -160 0 rlineto
+  closepath
+  0.55 0.27 0.07 setrgbcolor
+  fill
+grestore
+
+gsave
+  300 410 translate
+
+  gsave
+    0 0 translate
+    copa
+  grestore
+
+  gsave
+    -40 -40 translate
+    copa
+  grestore
+
+  gsave
+    40 -40 translate
+    copa
+  grestore
+grestore
+
+
+% --- Arbol izquierda ---
+
+gsave
+  175 280 translate 
+  90 rotate
+  -50 0 translate
+  
+  newpath
+    0 0 moveto
+    160 0 rlineto
+    0 40 rlineto
+    -160 0 rlineto
+  closepath
+  0.55 0.27 0.07 setrgbcolor
+  fill
+grestore
+
+gsave
+  150 390 translate
+
+  gsave
+    0 0 translate
+    copa
+  grestore
+
+  gsave
+    -20 10 translate
+    copa
+  grestore
+
+  gsave
+    20 10 translate
+    copa
+  grestore
+grestore
+
+showpage

@@ -1,0 +1,103 @@
+%!PS
+/Times-Roman findfont 12 scalefont setfont
+
+% Pagina 1 – Tabla de datos
+
+
+% Titulo
+150 750 moveto
+(Datos de trafico) show
+
+% Lineas horizontales
+newpath 140 710 moveto 350 710 lineto stroke
+newpath 140 690 moveto 350 690 lineto stroke
+newpath 140 670 moveto 350 670 lineto stroke
+newpath 140 650 moveto 350 650 lineto stroke
+newpath 140 630 moveto 350 630 lineto stroke
+newpath 140 610 moveto 350 610 lineto stroke
+newpath 140 590 moveto 350 590 lineto stroke
+newpath 140 570 moveto 350 570 lineto stroke 
+
+% Lineas verticales
+newpath 140 710 moveto 140 570 lineto stroke
+newpath 240 710 moveto 240 570 lineto stroke
+newpath 350 710 moveto 350 570 lineto stroke
+
+% Cabecera de columnas
+150 695 moveto (Hora) show   250 695 moveto (Trafico) show
+
+% Datos
+150 675 moveto (08:00) show   250 675 moveto (30) show
+150 655 moveto (09:00) show   250 655 moveto (45) show
+150 635 moveto (10:00) show   250 635 moveto (20) show
+150 615 moveto (11:00) show   250 615 moveto (60) show
+150 595 moveto (12:00) show   250 595 moveto (40) show
+150 575 moveto (13:00) show   250 575 moveto (50) show
+
+showpage
+
+
+
+
+
+
+%Pagina 2
+
+
+/Times-Roman findfont 12 scalefont setfont
+
+150 750 moveto
+(Grafica de trafico) show
+
+/baseY 695 40 sub 200 sub def
+
+% Ejes XY
+newpath
+150 baseY moveto 150 baseY 200 add lineto stroke 
+newpath
+150 baseY moveto 360 baseY lineto stroke          
+
+% Etiquetas de ejes
+130 baseY 204 add moveto (Trafico) show
+370 baseY 5 sub moveto (Hora) show   
+
+% Eje X
+150 baseY 15 sub moveto (08) show
+190 baseY 15 sub moveto (09) show
+230 baseY 15 sub moveto (10) show
+270 baseY 15 sub moveto (11) show
+310 baseY 15 sub moveto (12) show
+350 baseY 15 sub moveto (13) show
+
+% Eje Y
+125 baseY moveto (0) show
+125 baseY 40 add moveto (20) show
+125 baseY 80 add moveto (40) show
+125 baseY 120 add moveto (60) show
+125 baseY 160 add moveto (80) show
+
+% Linea del grafico
+1 0 0 setrgbcolor
+
+newpath
+150 baseY 60 add moveto    % 08:00 - 30
+190 baseY 90 add lineto    % 09:00 - 45
+230 baseY 40 add lineto    % 10:00 - 20
+270 baseY 120 add lineto   % 11:00 - 60
+310 baseY 80 add lineto    % 12:00 - 40
+350 baseY 100 add lineto   % 13:00 - 50
+stroke
+
+% Marco vacio grafica
+newpath
+100 baseY 35 sub moveto                
+410 baseY 35 sub lineto                 
+410 baseY 220 add 35 add lineto         
+100 baseY 220 add 35 add lineto         
+closepath
+0 setgray
+0.5 setlinewidth
+stroke
+
+
+showpage
